@@ -2,7 +2,7 @@
     --primary-color: #222;
     --secondary-color: #555;
     --accent-color: #ff3b30;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -12,52 +12,185 @@ body {
     text-align: center;
 }
 
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 40px;
+}
+
 .hero h1 {
-    font-size: 3.5rem; /* Increase font size */
-    font-weight: 900; /* Make it bolder */
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 0.85; /* Decreases spacing between lines */
+    margin-bottom: 5px; /* Reduce space below the text */
+}
+
+.hero img {
+    width: 900px; /* Adjusted size */
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
+    margin-top: -40px; /* Move image closer to text */
 }
 
 
-.hero img {
-    width: 250px;
+
+.hero .subtitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Polaroid Cloud Title */
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+
+
+/* Ensures tagline is centered */
+.tagline {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tagline h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #222;
+    margin: 0 auto;
+}
+
+/* Keeps paragraph aligned with icons */
+.description {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.description p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    width: 100%;
 }
 
 .features ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: 80%;
+    max-width: 700px;
 }
 
 .features li {
-    font-size: 1.2rem;
-    margin: 10px 0;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #818181;
+    margin: 20px 0;
+    justify-content: flex-start;
+    text-align: left;
+    line-height: 1.5;
 }
 
 .features i {
-    color: #ff3b30; /* Adjust to match design */
-    font-size: 1.5rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: #222;
+    width: 40px;
+    min-width: 40px;
+    text-align: center;
 }
 
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px auto;
+}
 
+.subscribe h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
 
 .subscribe form {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Keeps light shadow */
+    max-width: 600px; /* Slightly wider for better balance */
+    margin: 0 auto;
     gap: 10px;
+    border: 1px solid #e0e0e0; /* Adds grey border */
+    background: linear-gradient(to bottom, #f9f9f9, #f2f2f2); /* Subtle grey gradient */
 }
 
 .subscribe input {
-    padding: 10px;
+    padding: 15px;
     font-size: 1rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    outline: none;
+    background: white;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); /* Adds slight depth */
 }
 
 .subscribe button {
-    background: var(--accent-color);
+    background: #ff3b30;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 25px;
+    font-size: 1rem;
     border: none;
+    border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 50px; /* Matches input height */
+}
+
+.subscribe button:hover {
+    background: #e02720;
 }
